@@ -5,11 +5,11 @@ import { IoMdList } from "react-icons/io";
 import Image from "next/image";
 
 async function getPokemons(): Promise<SimplePokemon[]> {
-  const res = await fetch("https://pokeapi.co/api/v2/pokemon**?limit=151", {
+  const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=151", {
     next: { revalidate: 86400 }, // Revalida cada 24 horas
   });
 
-  if (!res.ok) throw new Error("Error al cargar pokémon - API no disponible");
+  if (!res.ok) throw new Error("Error al cargar pokémon");
 
   const data: PokemonListResponse = await res.json();
 
