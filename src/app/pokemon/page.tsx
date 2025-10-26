@@ -5,8 +5,7 @@ import { IoMdList } from "react-icons/io";
 import Image from "next/image";
 
 async function getPokemons(): Promise<SimplePokemon[]> {
-  // Simulando un error real: URL incorrecta de la API
-  const res = await fetch("https://pokeapi.co/api/v2/pokemon-INVALID?limit=151", {
+  const res = await fetch("https://pokeapi.co/api/v2/pokemon**?limit=151", {
     next: { revalidate: 86400 }, // Revalida cada 24 horas
   });
 
