@@ -133,8 +133,8 @@ const nextConfig: NextConfig = {
 ### **Instalación**
 ```bash
 # Clonar el repositorio
-git clone <repository-url>
-cd next-ssg-isr-app
+git clone https://github.com/Vania-0731/DAWA-S10.git
+cd DAWA-S10
 
 # Instalar dependencias
 npm install
@@ -231,67 +231,36 @@ npm run start
 ## 🚀 Deployment
 
 ### **Vercel (Recomendado)**
+
+#### **Opción 1: Deploy automático desde GitHub**
+1. Conecta tu repositorio GitHub con Vercel
+2. Vercel detectará automáticamente que es un proyecto Next.js
+3. El deploy se ejecutará automáticamente en cada push
+
+#### **Opción 2: Deploy manual con CLI**
 ```bash
 # Instalar Vercel CLI
 npm i -g vercel
 
 # Deploy
 vercel
+
+# Seguir las instrucciones en pantalla
 ```
+
+#### **Configuración de Vercel**
+- **Framework Preset**: Next.js (detectado automáticamente)
+- **Build Command**: `npm run build`
+- **Output Directory**: `.next` (por defecto)
+- **Install Command**: `npm install`
+
+### **URLs después del deploy**
+- **Página principal**: `https://tu-proyecto.vercel.app/` → Redirige a Rick and Morty
+- **Rick and Morty**: `https://tu-proyecto.vercel.app/rickandmorty`
+- **Pokédex**: `https://tu-proyecto.vercel.app/pokemon`
 
 ### **Build de producción**
 ```bash
 npm run build
 # Genera páginas estáticas para todos los Pokémon y personajes
 ```
-
----
-
-## 📚 Aprendizajes Técnicos
-
-### **Next.js App Router**
-- Rutas dinámicas con `[param]`
-- Layouts anidados
-- Metadata dinámica
-- Error boundaries
-
-### **Renderizado Híbrido**
-- SSG para contenido estático
-- ISR para contenido semi-dinámico
-- CSR para interactividad
-
-### **TypeScript**
-- Tipado completo de APIs
-- Interfaces reutilizables
-- Type safety en runtime
-
-### **Tailwind CSS**
-- Diseño responsivo
-- Componentes reutilizables
-- Temas consistentes
-
----
-
-## 🤝 Contribuciones
-
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
-
----
-
-## 📄 Licencia
-
-Este proyecto está bajo la Licencia MIT. Ver `LICENSE` para más detalles.
-
----
-
-## 👨‍💻 Autor
-
-Desarrollado como parte del curso de **Desarrollo de Aplicaciones Web Avanzadas** - TECSUP
-
----
-
-*¡Explora el mundo Pokémon y el universo de Rick and Morty con estas aplicaciones optimizadas!* 🎮✨
